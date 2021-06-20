@@ -33,7 +33,7 @@ export class AppComponent {
       const params = new HttpParams().set(
         'name', name
       );
-      this.result = this.http.get(
+      var service = this.http.get(
         `${this.url}`,
         { headers, params },
       ).pipe(
@@ -41,7 +41,10 @@ export class AppComponent {
           return throwError('Search Error!');
         })
       );
-      console.log(this.result.data);
+      service.subscribe(data => {
+          console.log(data);
+          this.result = JSON.stringify(data);
+        })
     }
   }
 }
