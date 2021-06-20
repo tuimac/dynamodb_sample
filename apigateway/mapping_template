@@ -1,0 +1,4 @@
+{
+    "name": "$input.params('name')",
+    "job": "$input.params('job')"
+}
