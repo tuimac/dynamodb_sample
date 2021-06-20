@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<div>
+  <h1>Employee Database</h1>
+  <mat-form-field appearance="outline" (keyup.enter)="searchEmployee(employeeName.value)">
+    <mat-label>Employee Name</mat-label>
+    <input #employeeName matInput placeholder="Name here...">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="searchEmployee(employeeName.value)">
+    Search
+  </button>
+  <div *ngIf="result; let result">
+    <pre>{{ result }}</pre>>
+  </div>
+</div>
