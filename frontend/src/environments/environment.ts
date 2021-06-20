@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiurl: ' https://mplc8j04e6.execute-api.ap-northeast-1.amazonaws.com/test/employee'
+  apiurl: 'xxx'
 };
 
 /*
